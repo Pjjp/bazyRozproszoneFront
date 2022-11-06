@@ -1,0 +1,15 @@
+.example-card {
+    display: inline-block;
+    background-color: rgb(7, 116, 189);
+  
+    color: black;
+  
+    width: 300px;
+    max-width: 80vw;
+    margin: 10px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
