@@ -1,9 +1,8 @@
 .example-card {
     display: inline-block;
     background-color: rgb(7, 116, 189);
-  
+    float: left;
     color: black;
-  
     width: 300px;
     max-width: 80vw;
     margin: 10px;
