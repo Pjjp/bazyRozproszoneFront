@@ -6,16 +6,25 @@ import { Injectable } from '@angular/core';
 })
 export class OrderService {
 
-  constructor(private http:HttpClient) { }
-
+  constructor(private http:HttpClient) { 
+    this.getProducts().subscribe(data => {
+      console.log(data);
+    });
+  }
   baseUrl:string = 'http://localhost:5254/';
 
-  public getClients(){
-    const headers = new HttpHeaders({ 'Content-Type':'application/json' });
-    return this.http.get(this.baseUrl+"Client");
-  }
+  // public getClients(){
+  //   const headers = new HttpHeaders({ 'Content-Type':'application/json' });
+  //   return this.http.get(this.baseUrl+"Client");
+  // }
+  // public getProducts(){
+  //   const headers = new HttpHeaders({ 'Content-Type':'application/json' });
+  //   return this.http.get(this.baseUrl+"Product");
+  // }
   public getProducts(){
-    const headers = new HttpHeaders({ 'Content-Type':'application/json' });
-    return this.http.get(this.baseUrl+"Product");
+    return this.http.get("./assets/products.json");
+  }
+  public getClients(){
+    return this.http.get("./assets/clients.json");
   }
 }
